@@ -12,6 +12,8 @@ extern "C" {
 
 int sonicTestInputClamping(void);
 int sonicTestInputsDontCrash(void);
+int sonicTestChordPitchChangesOutput(void);
+int sonicTestChordPitchExtremeRatioDoesNotOverflow(void);
 
 #ifdef __cplusplus
 }
