@@ -16,6 +16,7 @@
 int main(int argc, char** argv) {
   assert(sonicTestInputClamping());
   assert(sonicTestInputsDontCrash());
+  assert(sonicTestFloatSampleClamping());
   printf("All tests passed.\n");
   return 0;
 }

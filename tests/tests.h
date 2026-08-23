@@ -12,6 +12,7 @@ extern "C" {
 
 int sonicTestInputClamping(void);
 int sonicTestInputsDontCrash(void);
+int sonicTestFloatSampleClamping(void);
 
 #ifdef __cplusplus
 }
