@@ -17,7 +17,8 @@ CFLAGS=-Wall -Wno-unused-function -g -ansi -fPIC -pthread -I ..
 
 TEST_SRC = \
 input_clamping_test.c \
-wave_channel_validation_test.c
+wave_channel_validation_test.c \
+chord_pitch_test.c
 
 CC=gcc
 
