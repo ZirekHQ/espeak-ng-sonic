@@ -16,7 +16,8 @@ CFLAGS=-Wall -Wno-unused-function -g -ansi -fPIC -pthread -I ..
 #CFLAGS += -Wall -Wno-unused-function -ansi -fPIC -pthread -I ..
 
 TEST_SRC = \
-input_clamping_test.c
+input_clamping_test.c \
+wave_channel_validation_test.c
 
 CC=gcc
 
@@ -25,8 +26,8 @@ all: genwave runtests
 genwave: ../wave.c ../wave.h genwave.c genwave.h genwave_main.c
 	$(CC) $(CFLAGS) -o genwave genwave.c genwave_main.c ../wave.c -lm
 
-runtests: runtests.c genwave.c ../sonic.c ../sonic.h tests.h $(TEST_SRC)
-	$(CC) $(CFLAGS) -o runtests runtests.c genwave.c ../sonic.c $(TEST_SRC) -lm
+runtests: runtests.c genwave.c ../sonic.c ../sonic.h ../wave.c ../wave.h tests.h $(TEST_SRC)
+	$(CC) $(CFLAGS) -o runtests runtests.c genwave.c ../sonic.c ../wave.c $(TEST_SRC) -lm
 
 clean:
 	rm -f *.o genwave runtests
