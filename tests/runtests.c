@@ -16,6 +16,9 @@
 int main(int argc, char** argv) {
   assert(sonicTestInputClamping());
   assert(sonicTestInputsDontCrash());
+  assert(sonicTestEnlargeOutputBufferRejectsOverflow());
+  assert(sonicTestEnlargeOutputBufferAcceptsNormalRequest());
+  assert(sonicTestInsertPitchPeriodRejectsOverflow());
   printf("All tests passed.\n");
   return 0;
 }

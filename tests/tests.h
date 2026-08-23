@@ -12,6 +12,9 @@ extern "C" {
 
 int sonicTestInputClamping(void);
 int sonicTestInputsDontCrash(void);
+int sonicTestEnlargeOutputBufferRejectsOverflow(void);
+int sonicTestEnlargeOutputBufferAcceptsNormalRequest(void);
+int sonicTestInsertPitchPeriodRejectsOverflow(void);
 
 #ifdef __cplusplus
 }
