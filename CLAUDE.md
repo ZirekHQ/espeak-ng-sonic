@@ -11,7 +11,7 @@ C89 library for changing speech speed/pitch/rate without artifacts, via a Hann-w
 - `make CC=clang CFLAGS="-Wall -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer" test` — sanitized run; must stay clean.
 - `make fuzz` — builds `fuzz_sonic` (libFuzzer harness, `tests/fuzz_main.c`). Run bounded: `./fuzz_sonic -max_total_time=120`.
 - `make coverage` — builds and runs `sonic_coverage`, emits `.gcov` via `gcov`.
-- `.github/workflows/ci.yml` runs all four as separate jobs on push/PR to `master`.
+- `.github/workflows/ci.yaml` runs all four as separate jobs on push/PR to `master`.
 - If working against a topic branch cut from `espeak-main` directly (i.e. not `develop`), it likely only has `tests/Makefile`'s own `runtests` target (`cd tests && make runtests && ./runtests`) — check which base you're on before assuming a root-Makefile target exists.
 
 ## Key files
